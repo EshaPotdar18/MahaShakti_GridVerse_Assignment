@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  postgres-db:
+    image: postgres:15-alpine
+    container_name: telematics-postgres
+    restart: always
+    environment:
+      POSTGRES_DB: telematics_db
+      POSTGRES_USER: telematics_user
+      POSTGRES_PASSWORD: telematics_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U telematics_user -d telematics_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  telematics-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: telematics-backend
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-db:5432/telematics_db
+      SPRING_DATASOURCE_USERNAME: telematics_user
+      SPRING_DATASOURCE_PASSWORD: telematics_pass
+    depends_on:
+      postgres-db:
+        condition: service_healthy
+
+volumes:
+  postgres_data:

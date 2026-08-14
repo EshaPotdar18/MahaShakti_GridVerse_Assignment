@@ -1,0 +1,215 @@
+Folder PATH listing for volume Windows-SSD
+Volume serial number is 00000092 2886:743D
+C:.
+¦   demo_stream.ps1
+¦   docker-compose.yml
+¦   Dockerfile
+¦   mvnw.cmd
+¦   pom.xml
+¦   README.md
+¦   structure.txt
+¦   
++---src
+¦   +---main
+¦   ¦   +---java
+¦   ¦   ¦   +---com
+¦   ¦   ¦       +---fleet
+¦   ¦   ¦           +---telematics
+¦   ¦   ¦               ¦   TelematicsApplication.java
+¦   ¦   ¦               ¦   
+¦   ¦   ¦               +---config
+¦   ¦   ¦               ¦       ClockConfig.java
+¦   ¦   ¦               ¦       OpenAPIConfig.java
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---controller
+¦   ¦   ¦               ¦       FleetQueryController.java
+¦   ¦   ¦               ¦       HealthController.java
+¦   ¦   ¦               ¦       TelematicsIngestController.java
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---domain
+¦   ¦   ¦               ¦   +---entity
+¦   ¦   ¦               ¦   ¦       TelematicsEvent.java
+¦   ¦   ¦               ¦   ¦       Tenant.java
+¦   ¦   ¦               ¦   ¦       Vehicle.java
+¦   ¦   ¦               ¦   ¦       
+¦   ¦   ¦               ¦   +---model
+¦   ¦   ¦               ¦           IngestionResult.java
+¦   ¦   ¦               ¦           IngestStatus.java
+¦   ¦   ¦               ¦           TelematicsPayload.java
+¦   ¦   ¦               ¦           
+¦   ¦   ¦               +---dto
+¦   ¦   ¦               ¦   +---request
+¦   ¦   ¦               ¦   ¦       BatchIngestRequest.java
+¦   ¦   ¦               ¦   ¦       TelematicsIngestRequest.java
+¦   ¦   ¦               ¦   ¦       
+¦   ¦   ¦               ¦   +---response
+¦   ¦   ¦               ¦           BatchIngestResponse.java
+¦   ¦   ¦               ¦           ErrorResponse.java
+¦   ¦   ¦               ¦           TelematicsIngestResponse.java
+¦   ¦   ¦               ¦           TenantResponse.java
+¦   ¦   ¦               ¦           VehicleStatusResponse.java
+¦   ¦   ¦               ¦           
+¦   ¦   ¦               +---exception
+¦   ¦   ¦               ¦       DataQualityValidationException.java
+¦   ¦   ¦               ¦       DuplicateEventException.java
+¦   ¦   ¦               ¦       GlobalExceptionHandler.java
+¦   ¦   ¦               ¦       OwnershipValidationException.java
+¦   ¦   ¦               ¦       TenantNotFoundException.java
+¦   ¦   ¦               ¦       VehicleNotFoundException.java
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---repository
+¦   ¦   ¦               ¦       TelematicsEventRepository.java
+¦   ¦   ¦               ¦       TenantRepository.java
+¦   ¦   ¦               ¦       VehicleRepository.java
+¦   ¦   ¦               ¦       
+¦   ¦   ¦               +---service
+¦   ¦   ¦                       DataSeederService.java
+¦   ¦   ¦                       FleetQueryService.java
+¦   ¦   ¦                       TelematicsIngestionService.java
+¦   ¦   ¦                       TelematicsValidationService.java
+¦   ¦   ¦                       
+¦   ¦   +---resources
+¦   ¦       ¦   application-dev.yml
+¦   ¦       ¦   application-prod.yml
+¦   ¦       ¦   application.yml
+¦   ¦       ¦   
+¦   ¦       +---db
+¦   ¦           +---migration
+¦   ¦                   V1__create_schema.sql
+¦   ¦                   V2__seed_initial_data.sql
+¦   ¦                   
+¦   +---test
+¦       +---java
+¦       ¦   +---com
+¦       ¦       +---fleet
+¦       ¦           +---telematics
+¦       ¦               +---controller
+¦       ¦               ¦       FleetQueryControllerTest.java
+¦       ¦               ¦       TelematicsIngestControllerTest.java
+¦       ¦               ¦       
+¦       ¦               +---integration
+¦       ¦               ¦       ConcurrencyDeduplicationIntegrationTest.java
+¦       ¦               ¦       TelematicsIngestionIntegrationTest.java
+¦       ¦               ¦       
+¦       ¦               +---service
+¦       ¦                       TelematicsIngestionServiceTest.java
+¦       ¦                       TelematicsValidationServiceTest.java
+¦       ¦                       
+¦       +---resources
+¦               application-test.yml
+¦               
++---target
+    +---classes
+    ¦   ¦   application-dev.yml
+    ¦   ¦   application-prod.yml
+    ¦   ¦   application.yml
+    ¦   ¦   
+    ¦   +---com
+    ¦   ¦   +---fleet
+    ¦   ¦       +---telematics
+    ¦   ¦           ¦   TelematicsApplication.class
+    ¦   ¦           ¦   
+    ¦   ¦           +---config
+    ¦   ¦           ¦       ClockConfig.class
+    ¦   ¦           ¦       OpenAPIConfig.class
+    ¦   ¦           ¦       
+    ¦   ¦           +---controller
+    ¦   ¦           ¦       FleetQueryController.class
+    ¦   ¦           ¦       HealthController.class
+    ¦   ¦           ¦       TelematicsIngestController.class
+    ¦   ¦           ¦       
+    ¦   ¦           +---domain
+    ¦   ¦           ¦   +---entity
+    ¦   ¦           ¦   ¦       TelematicsEvent.class
+    ¦   ¦           ¦   ¦       Tenant.class
+    ¦   ¦           ¦   ¦       Vehicle.class
+    ¦   ¦           ¦   ¦       
+    ¦   ¦           ¦   +---model
+    ¦   ¦           ¦           IngestionResult.class
+    ¦   ¦           ¦           IngestStatus.class
+    ¦   ¦           ¦           TelematicsPayload.class
+    ¦   ¦           ¦           
+    ¦   ¦           +---dto
+    ¦   ¦           ¦   +---request
+    ¦   ¦           ¦   ¦       BatchIngestRequest.class
+    ¦   ¦           ¦   ¦       TelematicsIngestRequest.class
+    ¦   ¦           ¦   ¦       
+    ¦   ¦           ¦   +---response
+    ¦   ¦           ¦           BatchIngestResponse.class
+    ¦   ¦           ¦           ErrorResponse.class
+    ¦   ¦           ¦           TelematicsIngestResponse.class
+    ¦   ¦           ¦           TenantResponse.class
+    ¦   ¦           ¦           VehicleStatusResponse.class
+    ¦   ¦           ¦           
+    ¦   ¦           +---exception
+    ¦   ¦           ¦       DataQualityValidationException.class
+    ¦   ¦           ¦       DuplicateEventException.class
+    ¦   ¦           ¦       GlobalExceptionHandler.class
+    ¦   ¦           ¦       OwnershipValidationException.class
+    ¦   ¦           ¦       TenantNotFoundException.class
+    ¦   ¦           ¦       VehicleNotFoundException.class
+    ¦   ¦           ¦       
+    ¦   ¦           +---repository
+    ¦   ¦           ¦       TelematicsEventRepository.class
+    ¦   ¦           ¦       TenantRepository.class
+    ¦   ¦           ¦       VehicleRepository.class
+    ¦   ¦           ¦       
+    ¦   ¦           +---service
+    ¦   ¦                   DataSeederService.class
+    ¦   ¦                   FleetQueryService.class
+    ¦   ¦                   TelematicsIngestionService.class
+    ¦   ¦                   TelematicsValidationService.class
+    ¦   ¦                   
+    ¦   +---db
+    ¦       +---migration
+    ¦               V1__create_schema.sql
+    ¦               V2__seed_initial_data.sql
+    ¦               
+    +---generated-sources
+    ¦   +---annotations
+    +---generated-test-sources
+    ¦   +---test-annotations
+    +---maven-status
+    ¦   +---maven-compiler-plugin
+    ¦       +---compile
+    ¦       ¦   +---default-compile
+    ¦       ¦           createdFiles.lst
+    ¦       ¦           inputFiles.lst
+    ¦       ¦           
+    ¦       +---testCompile
+    ¦           +---default-testCompile
+    ¦                   createdFiles.lst
+    ¦                   inputFiles.lst
+    ¦                   
+    +---surefire-reports
+    ¦       com.fleet.telematics.controller.FleetQueryControllerTest.txt
+    ¦       com.fleet.telematics.controller.TelematicsIngestControllerTest.txt
+    ¦       com.fleet.telematics.integration.ConcurrencyDeduplicationIntegrationTest.txt
+    ¦       com.fleet.telematics.integration.TelematicsIngestionIntegrationTest.txt
+    ¦       com.fleet.telematics.service.TelematicsIngestionServiceTest.txt
+    ¦       com.fleet.telematics.service.TelematicsValidationServiceTest.txt
+    ¦       TEST-com.fleet.telematics.controller.FleetQueryControllerTest.xml
+    ¦       TEST-com.fleet.telematics.controller.TelematicsIngestControllerTest.xml
+    ¦       TEST-com.fleet.telematics.integration.ConcurrencyDeduplicationIntegrationTest.xml
+    ¦       TEST-com.fleet.telematics.integration.TelematicsIngestionIntegrationTest.xml
+    ¦       TEST-com.fleet.telematics.service.TelematicsIngestionServiceTest.xml
+    ¦       TEST-com.fleet.telematics.service.TelematicsValidationServiceTest.xml
+    ¦       
+    +---test-classes
+        ¦   application-test.yml
+        ¦   
+        +---com
+            +---fleet
+                +---telematics
+                    +---controller
+                    ¦       FleetQueryControllerTest.class
+                    ¦       TelematicsIngestControllerTest.class
+                    ¦       
+                    +---integration
+                    ¦       ConcurrencyDeduplicationIntegrationTest.class
+                    ¦       TelematicsIngestionIntegrationTest.class
+                    ¦       
+                    +---service
+                            TelematicsIngestionServiceTest.class
+                            TelematicsValidationServiceTest.class
+                            
